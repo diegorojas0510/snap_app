@@ -1,0 +1,3 @@
+class Snapshot < ApplicationRecord
+  has_one_attached :image
+end

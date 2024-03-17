@@ -1,0 +1,32 @@
+<%= form_with(model: snapshot) do |form| %>
+  <% if snapshot.errors.any? %>
+    <div style="color: #d99090">
+      <h2><%= pluralize(snapshot.errors.count, "error") %> prohibited this snapshot from being saved:</h2>
+
+      <ul>
+        <% snapshot.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title, class: "form-control"%>
+  </div>
+
+  <div>
+    <%= form.label :image, style: "display: block" %>
+    <%= form.file_field :image, class: "form-control", accept:"image/*", capture:"camera" %>
+  </div>
+
+  <div>
+    <%= form.label :color, style: "display: block" %>
+    <%= form.color_field :color %>
+  </div>
+
+  <div>
+    <%= form.submit "Guardar Captura", class: "btn btn-success d-block w-100"%>
+  </div>
+<% end %>

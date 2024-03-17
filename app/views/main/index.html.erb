@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mi app</title>
+</head>
+<body>
+<div>
+<h2>Hola Mundo!</h2>
+<h2>Como Conectarnos desde nuestro pc a nuestro celular</h2>
+    <p>
+      <li>Primero</li>
+      <li>Encuntra la dirección IP de tu computadora</li>
+      <li>Comando: ifconfig | grep "inet " | grep -Fv 127.0.0.1 | awk '{print $2}'</li>
+      <li>Una vez encuentres tu dirección IP detienes tu servidor y ejecutas rails server -b 0.0.0.0</li>
+      <li>Esto nos asegura que que el servidor este escuchando en todas las interfaces de red incluidas en la de nuestro dispositivo movil</li>
+      <li>Ahora supongamos que nuestra red es 192.168.1.10:3000 esta es la que debemos escribir en nuestro celular</li>
+      <li>Wow! Tenemos conexión a nuestro equipo movil y podemos subir fotos desde nuestro celualr a nuestra applicación</li>
+    </p>
+</div>
+</body>
+</html>

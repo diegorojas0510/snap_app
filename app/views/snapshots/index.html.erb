@@ -1,0 +1,21 @@
+<div class="container-sm">
+  <div class="row">
+      <p style="color: green"><%= notice %></p>
+      <h1>Captura de Imagen</h1>
+    <div class="col-md-8">
+      <div class="card mb-8">
+      <div id="snapshots">
+        <% @snapshots.each do |snapshot| %>
+          <%= render snapshot %>
+          <p>
+            <br>
+            <%= link_to "Ver Captura", snapshot, class: "btn btn-outline-success d-block w-100" %>
+          </p>
+        <% end %>
+      </div>
+      </div>
+      <%= link_to "Nueva Captura", new_snapshot_path, class: "btn btn-outline-primary d-block w-100" %>
+    </div>
+
+  </div>
+</div>

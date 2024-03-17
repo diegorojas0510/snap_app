@@ -1,0 +1,11 @@
+<h1>Editing snapshot</h1>
+
+<%= render "form", snapshot: @snapshot %>
+
+<br>
+
+<div>
+  <%= link_to "Ver Captura", @snapshot, class: "btn btn-outline-info d-block w-100" %>
+  <br>
+  <%= link_to "Volver a Capturas", snapshots_path, class: "btn btn-outline-secondary d-block w-100" %>
+</div>

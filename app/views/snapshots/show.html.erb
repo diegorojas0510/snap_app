@@ -1,0 +1,12 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @snapshot %>
+
+<div>
+  <br>
+  <%= link_to "Editar Capturas", edit_snapshot_path(@snapshot), class: "btn btn-primary d-block w-100" %>
+  <br>
+  <%= link_to "Volver a Capturas", snapshots_path, class: "btn btn-outline-secondary d-block w-100" %>
+  <br>
+  <%= button_to "Eliminar Capturas", @snapshot, method: :delete,class: "btn btn-outline-danger d-block w-100" %>
+</div>
